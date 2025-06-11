@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALU GYM FIT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #222;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+            background: #fff;
+            margin: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid #000;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        a.pdf-link {
+            display: block;
+            margin: 10px 0;
+            color: #007BFF;
+            text-decoration: underline;
+        }
+        .carousel {
+            width: 100%;
+            max-width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        .carousel img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .carousel img.active {
+            position: relative;
+            opacity: 1;
+        }
+        #contacto .carousel {
+            max-width: 300px;
+            margin: 20px auto;
+        }
+        #contacto .carousel img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            object-fit: contain;
+        }
+        h2 a {
+            color: inherit;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        let currentSlide = 0;
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.carousel img');
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+            });
+            slides[index].classList.add('active');
+        }
+        function nextSlide() {
+            const slides = document.querySelectorAll('.carousel img');
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+        window.onload = () => {
+            showSlide(currentSlide);
+            setInterval(nextSlide, 4000);
+        };
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>GALU GYM FIT</h1>
+    <h2 id="nosotros">Nosotros</h2>
+</header>
+
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#rutinas">Rutinas</a>
+    <a href="#alimentacion">Plan de Alimentación</a>
+    <a href="#ropa">Ropa Deportiva</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<section id="inicio">
+    <h2><a href="#inicio">Página Principal</a></h2>
+    <div class="carousel">
+        <img src="galugym1.png" alt="GALU GYM 1" class="active">
+        <img src="galugym2.png" alt="GALU GYM 2">
+        <img src="galugym3.png" alt="GALU GYM 3">
+        <img src="galugym4.png" alt="GALU GYM 4">
+    </div>
+    <p>
+        En este sitio web podrás encontrar diversos contenidos para poder conseguir el cuerpo de tus sueños donde podrás tener las rutinas de prueba de 3 meses y si es de tu agrado podrás contactarte con un coach personal para la ayuda de tu crecimiento con un costo accesible y con dietas de igual forma que las rutinas de gym y por último podrás encontrar el apartado de un catálogo para la compra de ropa deportiva.
+    </p>
+</section>
+
+<section id="rutinas">
+    <h2><a href="#inicio">Rutinas - Semana 1</a></h2>
+    <table>
+        <tr><th>Día</th><th>Ejercicio</th></tr>
+        <tr><td><a href="Lunes.docx" target="_blank">Lunes</a></td><td>Rutina de Piernas</td></tr>
+        <tr><td><a href="Martes.docx" target="_blank">Martes</a></td><td>Rutina de Espalda</td></tr>
+        <tr><td><a href="Miercoles.docx" target="_blank">Miércoles</a></td><td>Rutina de Pierna Completa</td></tr>
+        <tr><td><a href="Jueves.docx" target="_blank">Jueves</a></td><td>Rutina de Hombros y Brazos</td></tr>
+        <tr><td><a href="Viernes.docx" target="_blank">Viernes</a></td><td>Glúteo</td></tr>
+        <tr><td>Sábado</td><td>Libre</td></tr>
+        <tr><td>Domingo</td><td>Libre</td></tr>
+    </table>
+
+    <h2><a href="#inicio">Rutinas - Semana 2</a></h2>
+    <table>
+        <tr><th>Día</th><th>Ejercicio</th></tr>
+        <tr><td><a href="Lunes (2mes).docx" target="_blank">Lunes</a></td><td>Rutina de Piernas</td></tr>
+        <tr><td><a href="martes (2mes).docx" target="_blank">Martes</a></td><td>Rutina de Espalda</td></tr>
+        <tr><td><a href="Miercoles (2mes).docx" target="_blank">Miércoles</a></td><td>Rutina de Pierna Completa</td></tr>
+        <tr><td><a href="jueves (2mes).docx" target="_blank">Jueves</a></td><td>Rutina de Hombros y Brazos</td></tr>
+        <tr><td><a href="viernes (2mes).docx" target="_blank">Viernes</a></td><td>Glúteo</td></tr>
+        <tr><td>Sábado</td><td>Libre</td></tr>
+        <tr><td>Domingo</td><td>Libre</td></tr>
+    </table>
+
+    <h2><a href="#inicio">Rutinas - Semana 3</a></h2>
+    <table>
+        <tr><th>Día</th><th>Ejercicio</th></tr>
+        <tr><td><a href="Lunes (3mes).docx" target="_blank">Lunes</a></td><td>Rutina de Piernas</td></tr>
+        <tr><td><a href="Martes (3mes).docx" target="_blank">Martes</a></td><td>Rutina de Espalda</td></tr>
+        <tr><td><a href="Miercoles (2mes).docx" target="_blank">Miércoles</a></td><td>Rutina de Pierna Completa</td></tr>
+        <tr><td><a href="Jueves (3mes).docx" target="_blank">Jueves</a></td><td>Rutina de Hombros y Brazos</td></tr>
+        <tr><td><a href="Viernes (3mes).docx" target="_blank">Viernes</a></td><td>Glúteo</td></tr>
+        <tr><td>Sábado</td><td>Libre</td></tr>
+        <tr><td>Domingo</td><td>Libre</td></tr>
+    </table>
+<section id="alimentacion">
+    <h2><a href="#inicio">Plan de Alimentación</a></h2>
+    <table>
+        <tr>
+            <th>Mes</th>
+            <th>Archivo</th>
+        </tr>
+        <tr>
+            <td>Primer Mes</td>
+            <td><a href="Plan alimenticio primer mes (1).docx" target="_blank">Ver Documento</a></td>
+        </tr>
+        <tr>
+            <td>Segundo Mes</td>
+            <td><a href="Plan alimentario segundo mes.docx" target="_blank">Ver Documento</a></td>
+        </tr>
+        <tr>
+            <td>Tercer Mes</td>
+            <td><a href="Plan alimenticio tercer mes.docx" target="_blank">Ver Documento</a></td>
+        </tr>
+    </table>
+</section>
+
+
+<section id="ropa">
+    <h2><a href="#inicio">Venta de Ropa Deportiva</a></h2>
+    <a class="pdf-link" href="SP catalogo caballero.pdf" target="_blank">SP Catálogo Caballero</a>
+    <a class="pdf-link" href="faldavestidos.pdf" target="_blank">Catálogo Falda, Vestidos y Pants</a>
+    <a class="pdf-link" href="OH 01 OLIMPICAS.pdf" target="_blank">OH 01 OLIMPICAS</a>
+</section>
+
+<section id="nosotros">
+    <h2><a href="#inicio">Nosotros</a></h2>
+    <p>
+        GALU GYM FIT es un espacio dedicado al bienestar físico y mental. Nuestro objetivo es ayudarte a alcanzar tus metas personales a través de planes de entrenamiento personalizados, nutrición adecuada y el acompañamiento de profesionales comprometidos. Con años de experiencia, ofrecemos una comunidad que apoya el crecimiento integral de cada uno de nuestros miembros.
+    </p>
+    <img src="nosotros.jpeg" alt="Imagen Sobre Nosotros" style="width:100%; max-width:600px; display:block; margin:20px auto;">
+</section>
+
+<section id="contacto">
+    <h2><a href="#inicio">Contacto</a></h2>
+    <p><strong>Coach:</strong> Erika Cruz Arana</p>
+    <p><strong>Teléfono:</strong> 7227968374</p>
+    <p><strong>Edad:</strong> 38</p>
+    <p><strong>Para mayor información puede contactar a:</strong></p>
+    <p><strong>Nombre:</strong> Gabriela de la Cruz Vallejo</p>
+    <p><strong>Teléfono celular:</strong> 722 702 3408</p>
+    <p><strong>Edad:</strong> 17 años</p>
+    <p><strong>Nombre:</strong> María Guadalupe Martínez Flores</p>
+    <p><strong>Teléfono celular:</strong> 7299213208</p>
+    <p><strong>Edad:</strong> 17 años</p>
+    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+    <img src="co1.jpeg" alt="Contacto 1" style="width: 150px; height: auto;">
+    <img src="co2.jpeg" alt="Contacto 2" style="width: 150px; height: auto;">
+</div>
+</section>
+
+<footer>
+    <p>&copy; 2025 GALU GYM FIT. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
